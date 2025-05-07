@@ -1,0 +1,96 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Mar 27 15:02:00 2025
+# Process ID         : 19904
+# Current directory  : C:/Users/KUSH P MAKWANA/Syllabus Tracker
+# Command line       : vivado.exe -mode tcl
+# Log file           : C:/Users/KUSH P MAKWANA/Syllabus Tracker/vivado.log
+# Journal file       : C:/Users/KUSH P MAKWANA/Syllabus Tracker\vivado.jou
+# Running On         : KUSH
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 5 4600H with Radeon Graphics         
+# CPU Frequency      : 2994 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 7966 MB
+# Swap memory        : 11274 MB
+# Total Virtual      : 19241 MB
+# Available Virtual  : 9262 MB
+#-----------------------------------------------------------
+open_project "C:/Users/KUSH P MAKWANA/canny/canny.xpr"
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/KUSH P MAKWANA/canny/canny.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 329.523 ; gain = 48.848
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'canny_test'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/KUSH P MAKWANA/canny/canny.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVivado/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'canny_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/KUSH P MAKWANA/canny/canny.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj canny_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/KUSH P MAKWANA/canny/canny.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot canny_test_behav xil_defaultlib.canny_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/XilinxVivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot canny_test_behav xil_defaultlib.canny_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/KUSH P MAKWANA/canny/canny.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "canny_test_behav -key {Behavioral:sim_1:Functional:canny_test} -tclbatch {canny_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source canny_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/canny_test/mem" to the wave window because it has 9437184 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+  255
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'canny_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 349.227 ; gain = 19.703
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 27 15:02:34 2025...
